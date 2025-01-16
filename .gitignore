@@ -1,0 +1,34 @@
+# Node.js-specific files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.pid.lock
+
+# Dependency directories
+bower_components/
+
+# Environment files
+.env
+.env.test
+
+# IDE and editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+coverage/

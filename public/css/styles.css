@@ -1,0 +1,141 @@
+/* Set the font size to 62.5% (10px = 1rem) for easier rem calculations */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+}
+
+/* Apply border-box box-sizing for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit; /* Links inherit color from parent */
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Arial", sans-serif;
+  font-size: 1.6rem;
+  background-color: rgb(32, 33, 38);
+  color: rgb(255, 255, 255);
+}
+
+.title {
+  color: rgb(213, 213, 213);
+}
+
+/* Set a default font and line-height */
+.container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 2rem;
+}
+
+section {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 1.8rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+section .title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 0.5rem;
+}
+
+section .content {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+section .no-margin {
+  margin-bottom: 0rem;
+}
+
+section .align-right {
+  justify-content: end;
+}
+
+section .btn-right {
+  display: flex;
+  justify-content: right;
+}
+
+.ip {
+  font-size: 1.5rem;
+}
+
+/* Ensure that images don't overflow their containers */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Provide consistent button styling */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid rgba(177, 177, 177, 0.8);
+  background-color: rgba(177, 177, 177, 0.8);
+  border-radius: 2rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-info {
+  border: 1px solid rgba(61, 108, 164, 0.8);
+  background-color: rgba(61, 108, 164, 0.8);
+}
+
+.btn-danger {
+  border: 1px solid rgba(164, 45, 59, 0.8);
+  background-color: rgba(164, 45, 59, 0.8);
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+}
+
+img.qr {
+  width: 100%;
+}

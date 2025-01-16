@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>Lock&Shut</header>
+      <section>
+        <div class="title">URL</div>
+        <div class="content-only"><%= url %></div>
+      </section>
+      <section>
+        <div class="title">Lock your Device</div>
+        <div class="content no-margin align-right">
+          <button
+            type="button"
+            class="btn btn-info"
+            onClick="post('<%= baseUrl %>/lock')"
+          >
+            Lock
+          </button>
+        </div>
+      </section>
+      <section>
+        <div class="title">Shut down your Device</div>
+        <div class="content no-margin align-right">
+          <button
+            type="button"
+            class="btn btn-danger"
+            onClick="post('<%= baseUrl %>/shut-down')"
+          >
+            Shut Down
+          </button>
+        </div>
+      </section>
+    </div>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
