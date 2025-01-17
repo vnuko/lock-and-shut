@@ -86,13 +86,13 @@ To ensure the shutdown functionality works on your system:
    username ALL=(ALL) NOPASSWD: /usr/sbin/shutdown
    ```
 
+   Replace username with the name of the user running the Node.js application.
+
 #### **Option 2: Run app as sudo user**
 
-```bash
-sudo npm start
-```
-
-Replace username with the name of the user running the Node.js application.
+    ```bash
+    sudo npm start
+    ```
 
 ## License
 
