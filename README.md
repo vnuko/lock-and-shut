@@ -1,6 +1,6 @@
-# Lock-and-Shut
+# Lock&Shut
 
-**Lock-and-Shut** is a Node.js and Express-powered application that allows you to remotely lock or shut down your PC using a web interface.
+**Lock&Shut** is a Node.js and Express-powered application that allows you to remotely lock or shut down your PC using a web interface.
 
 ## Demo
 
