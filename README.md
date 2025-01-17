@@ -62,6 +62,44 @@ The web interface features:
 - **Shut Down Button:** Power off your PC.
 - **QR Code:** Scan it to open the interface URL on your mobile device.
 
+# Node.js Shutdown App
+
+This Node.js application allows you to programmatically shut down your Mac or Linux computer using Express.
+
+## Important: Mac and Linux System Configuration for Shutdown
+
+To ensure the shutdown functionality works on your system:
+
+#### **Option 1: Edit the `sudoers` File (Recommended)**
+
+1. Open the `sudoers` file for editing:
+
+   ```bash
+   sudo visudo
+   ```
+
+2. Add the following line to allow the user running the app to execute the shutdown command without a password:
+
+Linux:
+
+    ```bash
+    username ALL=(ALL) NOPASSWD: /sbin/shutdown
+    ```
+
+For macOS:
+
+    ```bash
+    username ALL=(ALL) NOPASSWD: /usr/sbin/shutdown
+    ```
+
+#### **Option 2: Run app as sudo user**
+
+    ```bash
+    sudo npm start
+    ```
+
+Replace username with the name of the user running the Node.js application.
+
 ## License
 
 This project is licensed under the MIT License.
