@@ -14,10 +14,6 @@ pids/
 # Dependency directories
 bower_components/
 
-# Environment files
-.env
-.env.test
-
 # IDE and editor settings
 .idea/
 .vscode/

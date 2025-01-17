@@ -48,7 +48,7 @@
 
 4. **Access the Web Interface:**
 
-   - Open your browser and navigate to `http://<your-pc-ip>:9999`.
+   - Open your browser and navigate to `http://<your-pc-ip>:9001`.
    - The QR code displayed on the web interface provides a quick URL for mobile access.
 
 5. **Set your custom port if needed:**

@@ -7,7 +7,7 @@ import usefulFunctions from "./utils/usefulFunctions.js";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 9001;
 const localIp = usefulFunctions.getLocalIp();
 
 app.use(express.static(path.join(process.cwd(), "public")));
