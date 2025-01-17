@@ -21,8 +21,26 @@ function lockDevice() {
   }
 }
 
-function shutDownDevice() {
-  // shuttong down routine goes here...
+function shutdownDevice() {
+  const platform = os.platform();
+
+  try {
+    if (platform === "win32") {
+      usefulFunctions.shutdownWindows();
+    } else if (platform === "darwin") {
+      usefulFunctions.shutdownMacOS();
+    } else if (platform === "linux") {
+      usefulFunctions.shutdownLinux();
+    } else {
+      console.error(`Unsupported platform: ${platform}`);
+      throw new Error(
+        `Shutting down is not supported on platform: ${platform}`
+      );
+    }
+  } catch (error) {
+    console.error("Error while shutting down device:", error.message);
+    throw error;
+  }
 }
 
-export default { lockDevice, shutDownDevice };
+export default { lockDevice, shutdownDevice };

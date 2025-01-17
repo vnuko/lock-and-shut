@@ -73,4 +73,45 @@ function lockLinux() {
   );
 }
 
-export default { getLocalIp, lockWindows, lockMacOS, lockLinux };
+function shutdownWindows() {
+  exec("shutdown /s /t 0", (error) => {
+    if (error) {
+      console.error("Failed to shut down Windows device: ", error.message);
+      throw new Error(error.message);
+    } else {
+      console.log("Windows device shut down.");
+    }
+  });
+}
+
+function shutdownMacOS() {
+  exec("sudo shutdown -h now", (error) => {
+    if (error) {
+      console.error("Failed to shut down Mac device: ", error.message);
+      throw new Error(error.message);
+    } else {
+      console.log("Mac device shut down.");
+    }
+  });
+}
+
+function shutdownLinux() {
+  exec("shutdown now", (error) => {
+    if (error) {
+      console.error("Failed to shut down Linux device: ", error.message);
+      throw new Error(error.message);
+    } else {
+      console.log("Linux device shut down.");
+    }
+  });
+}
+
+export default {
+  getLocalIp,
+  lockWindows,
+  lockMacOS,
+  lockLinux,
+  shutdownWindows,
+  shutdownMacOS,
+  shutdownLinux,
+};
