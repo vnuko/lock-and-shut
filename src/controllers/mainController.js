@@ -3,7 +3,7 @@ import { generateUrlQr } from "../services/qrGenerator.js";
 
 function shutDown(req, res) {
   try {
-    osControl.shutDownDevice();
+    osControl.shutdownDevice();
     console.log("Shutting Down...");
     res.status(200).json({
       success: true,
