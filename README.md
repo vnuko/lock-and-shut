@@ -90,9 +90,9 @@ To ensure the shutdown functionality works on your system:
 
 #### **Option 2: Run app as sudo user**
 
-    ```bash
-    sudo npm start
-    ```
+```bash
+sudo npm start
+```
 
 ## License
 
